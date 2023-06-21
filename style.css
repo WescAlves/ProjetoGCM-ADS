@@ -88,6 +88,10 @@ button {
     padding-top: 100px;
 }
 
+.Primeira{
+    padding: 50px;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -136,4 +140,6 @@ footer .redes_sociais {
     gap: 32px;
     flex-wrap: wrap;
 }
+
+
 
