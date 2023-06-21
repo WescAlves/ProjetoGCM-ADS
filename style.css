@@ -11,7 +11,19 @@ body {
     height: 100%;
 }
 
-
+/* Barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: white;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(65, 63, 63);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #00ffc3de;
+}
 /* Cabeçalho */
 .Cabecalho {
     display: flex;
