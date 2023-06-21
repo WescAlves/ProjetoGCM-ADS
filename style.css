@@ -97,7 +97,81 @@ main {
     flex-direction: column;
     gap: 2px;
 }
+/* primeira seção */
+section {
+    padding: 64px;
+    padding-top: 100px;
+}
 
+.primeira {
+    background: gray;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 670px;
+}
+
+.primeira > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 300px;
+}
+
+.primeira > div p {
+    max-width: 600px;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 32px;
+    color: white;
+    letter-spacing: 8px;
+}
+
+.primeira strong {
+    color: #00ffc3de;
+}
+
+.imagemMain {
+    max-width: 350px;
+    padding: 16px;
+}
+
+.imgADS {
+    /* border-radius: 90%; */
+    width: 100%;
+}
+/* segunda seção */
+.segunda {
+    margin-top: -5px;
+    background-color: rgb(35, 35, 84);
+    display: flex;
+    height: 350px;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.segunda > div {
+    display: flex;
+    gap: 64px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+.segunda > div img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.segunda > div p {
+    max-width: 600px;
+    color: white;
+    text-align: justify;
+}
 /* Rodapé */
 .Rodape {
     padding: 64px;
@@ -139,7 +213,7 @@ footer .redes_sociais {
     justify-content: center;
     gap: 32px;
     flex-wrap: wrap;
-}
+    }
 
 
 
