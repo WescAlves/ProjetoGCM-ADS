@@ -1,6 +1,6 @@
-const MatBtn = document.querySelector("sign-in-btn");
-const LoginBtn = document.querySelector("log-in-btn");
-
+const MatBtn = document.querySelector("#sign-in-btn");
+const LoginBtn = document.querySelector("#log-in-btn");
+const divBtn = document.querySelector("botoes");
 class usuario  {
     constructor (user, password, log){
         this.user = user;
@@ -8,7 +8,7 @@ class usuario  {
         this.log = log;
     }
 }
-let userAdmin = new usuario("admin", "admin", true);
+let userAdmin = new usuario("admin", "admin", false);
 let Wesley = new usuario("wesley", "wesley", true);
 localStorage.setItem(userAdmin.user, JSON.stringify(userAdmin));
 localStorage.setItem(Wesley.user, JSON.stringify(Wesley));
@@ -18,32 +18,30 @@ const pegaItem = function(key){
     return JSON.parse(localStorage.getItem(key));
 }
 
-let logado = function(){
-    let obj = Object.keys(localStorage);
-    obj.forEach(element => {
-        let usr = JSON.parse(localStorage.getItem(element));
-        if(usr.log === true){
-            //console.log(usr.user);
-            return element;
-        }
-    console.log("Passou pelo IF");
-    return 0;
-    });
+const logado = function(key){
+    let usr = JSON.parse(localStorage.getItem(key));
+    if(usr.log === true){
+        return 1;
+    }
 }
 
 
+
 window.addEventListener("load", function(){
-    let key = logado();
-    console.log(key);
-    let usr = JSON.parse(localStorage.getItem(key));
-   // console.log(usr);
-    if(key === true){ 
-        console.log("Passou aqui");
-        MatBtn.remove();
-        LoginBtn.remove();
-    }
-    
-})
+    let obj = Object.keys(localStorage);
+    obj.forEach(element => {
+        let resposta = logado(element);
+        if(resposta===1){
+            let loggedUser = pegaItem(element);
+            MatBtn.remove();
+            LoginBtn.remove();
+            console.log(loggedUser); 
+        }     
+        else{
+            console.log('Não logado')
+        }   
+    });    
+    });
 
 
 
