@@ -227,5 +227,10 @@ footer .redes_sociais {
     flex-wrap: wrap;
     }
 
+    #welcome{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        color: aquamarine;
+    }
 
 
