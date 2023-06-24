@@ -60,21 +60,29 @@ window.addEventListener("load", function(){
             MatBtn.addEventListener("click", function(){
                     let modal = document.createElement("dialog");
                     body.appendChild(modal);
+                    let modalTitle = document.createElement("p");
+                    modalTitle.classList = 'modal-title';
+                    modalTitle.textContent = 'Matricule-se';
+                    modal.appendChild(modalTitle);
                     let MatUsr = document.createElement('input');
                     let MatPas = document.createElement('input');
+                    MatUsr.classList = 'modal-input';
+                    MatPas.classList = 'modal-input';
                     let MatriculaBtn = document.createElement("button");
-                    MatriculaBtn.style.width = '100px';
+                    //MatriculaBtn.classList = 'btn'
+                    MatriculaBtn.id = 'modal-btn'
                     MatriculaBtn.textContent = "Matricular";
-                    MatriculaBtn.style.marginLeft = '250px';
-                    MatriculaBtn.style.marginTop = '20px';
-                    MatPas.style.marginLeft = '10px'
+                    //MatriculaBtn.style.marginLeft = '250px';
+                    //MatriculaBtn.style.marginTop = '20px';
+                    //MatPas.style.marginLeft = '10px'
                     MatUsr.placeholder = "Usuário";
                     MatPas.placeholder = "Senha";
-                    MatUsr.style.marginTop = '25px'
-                    MatUsr.style.width = '285px';
-                    MatPas.style.width = '285px';
-                    modal.style.width = '600px';
-                    modal.style.height = '120px';
+                    MatPas.type = 'password';
+                    //MatUsr.style.marginTop = '25px'
+                    //MatUsr.style.width = '285px';
+                    //MatPas.style.width = '285px';
+                    //modal.style.width = '600px';
+                    //modal.style.height = '120px';
                     modal.appendChild(MatUsr);
                     modal.appendChild(MatPas);
                     modal.appendChild(MatriculaBtn);
@@ -95,21 +103,28 @@ window.addEventListener("load", function(){
                 LoginBtn.addEventListener("click", function(){
                 let modal = document.createElement("dialog");
                 body.appendChild(modal);
+                let LoginTitle = document.createElement("p");
+                LoginTitle.textContent = 'Login';
+                LoginTitle.classList = 'modal-title';
+                modal.appendChild(LoginTitle);
                 let LoginUsr = document.createElement('input');
                 let LoginPas = document.createElement('input');
                 let LogarBtn = document.createElement("button");
-                LogarBtn.style.width = '100px';
+                LoginUsr.classList = 'modal-input';
+                LoginPas.classList = 'modal-input';
+                LogarBtn.id = 'modal-btn';
                 LogarBtn.textContent = "Login";
-                LogarBtn.style.marginLeft = '250px';
-                LogarBtn.style.marginTop = '20px';
-                LoginPas.style.marginLeft = '10px'
+                //LogarBtn.style.width = '100px';
+                //LogarBtn.style.marginLeft = '250px';
+                //LogarBtn.style.marginTop = '20px';
+                //LoginPas.style.marginLeft = '10px'
                 LoginUsr.placeholder = "Usuário";
                 LoginPas.placeholder = "Senha";
-                LoginUsr.style.marginTop = '25px'
-                LoginUsr.style.width = '285px';
-                LoginPas.style.width = '285px';
-                modal.style.width = '600px';
-                modal.style.height = '120px';
+                //LoginUsr.style.marginTop = '25px'
+                //LoginUsr.style.width = '285px';
+                //LoginPas.style.width = '285px';
+                //modal.style.width = '600px';
+                //modal.style.height = '120px';
                 modal.appendChild(LoginUsr);
                 modal.appendChild(LoginPas);
                 modal.appendChild(LogarBtn);
