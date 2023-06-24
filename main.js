@@ -9,12 +9,7 @@ class usuario  {
         this.log = log;
     }
 }
-//localStorage.clear();
-//let userAdmin = new usuario("admin", "admin", false);
-//let Wesley = new usuario("wesley", "wesley", false);
-//localStorage.setItem(userAdmin.user, JSON.stringify(userAdmin));
-//localStorage.setItem(Wesley.user, JSON.stringify(Wesley));
-//console.log(localStorage);
+
 
 const adicionaUser = function(user, password, ver){
     let NovoUsuario = new usuario(user, password, ver);
@@ -40,7 +35,6 @@ window.addEventListener("load", function(){
         let resposta = logado(element);
         if(resposta===1){
             let loggedUser = pegaItem(element);
-            //console.log(loggedUser);
             MatBtn.remove();
             LoginBtn.remove();
             let p = document.createElement("p");
@@ -53,7 +47,6 @@ window.addEventListener("load", function(){
             logoutBtn.addEventListener("click", function(){
                 loggedUser.log = false;
                 localStorage.setItem(loggedUser.user, JSON.stringify(loggedUser));
-                console.log(loggedUser);
                 location.reload();
                 
             });
@@ -65,9 +58,7 @@ window.addEventListener("load", function(){
         }     
         }); 
             MatBtn.addEventListener("click", function(){
-                    console.log("Entrou no Matricule-se!!")
                     let modal = document.createElement("dialog");
-                    console.log(modal);
                     body.appendChild(modal);
                     let MatUsr = document.createElement('input');
                     let MatPas = document.createElement('input');
@@ -99,13 +90,10 @@ window.addEventListener("load", function(){
                         else{
                             alert("Digite as informações!")
                         }
-                        console.log(localStorage);
                     })
                 });
                 LoginBtn.addEventListener("click", function(){
-                console.log("Entrou no LogIn!!")
                 let modal = document.createElement("dialog");
-                console.log(modal);
                 body.appendChild(modal);
                 let LoginUsr = document.createElement('input');
                 let LoginPas = document.createElement('input');
@@ -134,10 +122,8 @@ window.addEventListener("load", function(){
                         if(logUsuario === null){
                             alert("Usuário não encontrado!")
                         }
-                        console.log(logUsuario);
                         if(LogPas === logUsuario.password){
                             adicionaUser(LogUser, LogPas, true);
-                            console.log('logou');
                             location.reload();
                             modal.close();
                         }
@@ -148,7 +134,7 @@ window.addEventListener("load", function(){
                     else{
                         alert("Informe o usuário e a senha");
                     }
-                    //console.log("Logado");
+                
                 })
             })
 
