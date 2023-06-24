@@ -1,5 +1,5 @@
 const body = document.querySelector("body");
-const MatBtn = document.querySelector("#sign-in-btn");
+let MatBtn = document.querySelector("#sign-in-btn");
 const LoginBtn = document.querySelector("#log-in-btn");
 const divBtn = document.querySelector(".botoes");
 class usuario  {
@@ -9,8 +9,9 @@ class usuario  {
         this.log = log;
     }
 }
+//localStorage.clear();
 let userAdmin = new usuario("admin", "admin", false);
-let Wesley = new usuario("wesley", "wesley", false);
+let Wesley = new usuario("wesley", "wesley", true);
 localStorage.setItem(userAdmin.user, JSON.stringify(userAdmin));
 localStorage.setItem(Wesley.user, JSON.stringify(Wesley));
 //console.log(localStorage);
@@ -55,49 +56,104 @@ window.addEventListener("load", function(){
                 console.log(loggedUser);
                 p.remove();
                 logoutBtn.remove();
-                divBtn.innerHTML = '<button class="btn" id="sign-in-btn"><strong>Matricule-se</strong></button> <button class="btn" id="log-in-btn"><strong>Login</strong></button>'
-            });    
+                let signInBtn = document.createElement("button");
+                signInBtn.id = "sign-in-btn"
+                signInBtn.textContent = "Matricule-se"
+                //divBtn.appendChild(signInBtn);
+                divBtn.innerHTML = '<button class="btn-sign" id="sign-in-btn"><strong>Matricule-se</strong></button> <button class="btn" id="log-in-btn"><strong>Login</strong></button>'
+                MatBtn = document.querySelector(".btn-sign");
+                MatBtn.classList = "btn";
+                MatBtn.id = "sign-in-btn";
+                MatBtn.addEventListener("click", function(){
+                    console.log("Entrou no Matricule-se!!")
+                    let modal = document.createElement("dialog");
+                    console.log(modal);
+                    body.appendChild(modal);
+                    let MatUsr = document.createElement('input');
+                    let MatPas = document.createElement('input');
+                    let MatriculaBtn = document.createElement("button");
+                    MatriculaBtn.style.width = '100px';
+                    MatriculaBtn.textContent = "Matricular";
+                    MatriculaBtn.style.marginLeft = '250px';
+                    MatriculaBtn.style.marginTop = '20px';
+                    MatPas.style.marginLeft = '10px'
+                    MatUsr.placeholder = "Usuário";
+                    MatPas.placeholder = "Senha";
+                    MatUsr.style.marginTop = '25px'
+                    MatUsr.style.width = '285px';
+                    MatPas.style.width = '285px';
+                    modal.style.width = '600px';
+                    modal.style.height = '120px';
+                    modal.appendChild(MatUsr);
+                    modal.appendChild(MatPas);
+                    modal.appendChild(MatriculaBtn);
+                    modal.showModal();
+                    ;
+                    MatriculaBtn.addEventListener('click', function(){
+                        let novoUsername = MatUsr.value;
+                        let novoPassword = MatPas.value
+                        if(novoUsername !== '' && novoPassword !== ''){
+                            adicionaUser(novoUsername, novoPassword);
+                            alert("Usuário matriculado, faça o login para acessar!");
+                            modal.close();
+                        }
+                        else{
+                            alert("Digite as informações!")
+                        }
+                        console.log(localStorage);
+                    })
+                })
+            }); 
+               
         }     
         else{
             console.log('Não logado');
         }   
-    });
-    MatBtn.addEventListener("click", function(){
-        console.log("Entrou no Matricule-se!!")
-        let modal = document.createElement("dialog");
-        console.log(modal);
-        body.appendChild(modal);
-        let MatUsr = document.createElement('input');
-        let MatPas = document.createElement('input');
-        let MatriculaBtn = document.createElement("button");
-        MatriculaBtn.style.width = '100px';
-        MatriculaBtn.textContent = "Matricular";
-        MatriculaBtn.style.marginLeft = '250px';
-        MatriculaBtn.style.marginTop = '20px';
-        MatPas.style.marginLeft = '10px'
-        MatUsr.placeholder = "Usuário";
-        MatPas.placeholder = "Senha";
-        MatUsr.style.marginTop = '25px'
-        MatUsr.style.width = '285px';
-        MatPas.style.width = '285px';
-        modal.style.width = '600px';
-        modal.style.height = '120px';
-        modal.appendChild(MatUsr);
-        modal.appendChild(MatPas);
-        modal.appendChild(MatriculaBtn);
-        modal.showModal();
-        ;
-        MatriculaBtn.addEventListener('click', function(){
-            let novoUsername = MatUsr.value;
-            let novoPassword = MatPas.value
-            adicionaUser(novoUsername, novoPassword);
-            modal.close();
-            console.log(localStorage);
+            MatBtn.addEventListener("click", function(){
+            console.log("Entrou no Matricule-se!!")
+            let modal = document.createElement("dialog");
+            console.log(modal);
+            body.appendChild(modal);
+            let MatUsr = document.createElement('input');
+            let MatPas = document.createElement('input');
+            let MatriculaBtn = document.createElement("button");
+            MatriculaBtn.style.width = '100px';
+            MatriculaBtn.textContent = "Matricular";
+            MatriculaBtn.style.marginLeft = '250px';
+            MatriculaBtn.style.marginTop = '20px';
+            MatPas.style.marginLeft = '10px'
+            MatUsr.placeholder = "Usuário";
+            MatPas.placeholder = "Senha";
+            MatUsr.style.marginTop = '25px'
+            MatUsr.style.width = '285px';
+            MatPas.style.width = '285px';
+            modal.style.width = '600px';
+            modal.style.height = '120px';
+            modal.appendChild(MatUsr);
+            modal.appendChild(MatPas);
+            modal.appendChild(MatriculaBtn);
+            modal.showModal();
+            ;
+            MatriculaBtn.addEventListener('click', function(){
+                let novoUsername = MatUsr.value;
+                let novoPassword = MatPas.value
+                if(novoUsername !== '' && novoPassword !== ''){
+                    adicionaUser(novoUsername, novoPassword);
+                    alert("Usuário matriculado, faça o login para acessar!");
+                    modal.close();
+                }
+                else{
+                    alert("Digite as informações!")
+                }
+                console.log(localStorage);
+            })
         })
-    })
-    
+
 
     });
+});
+
+    
 
 
 
