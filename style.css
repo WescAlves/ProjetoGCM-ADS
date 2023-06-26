@@ -83,7 +83,7 @@ button {
 }
 
 .btn {
-    background-color: #00ffc3de;
+    background-color: #14d9abde;
     border: 1px solid white;
     color: white;
 }
@@ -118,13 +118,17 @@ section {
 }
 
 .primeira {
-    background: gray;
+    background: linear-gradient(90deg, rgb(0, 0, 0), #251e5ab3);
     display: flex;
     justify-content: space-evenly;
     gap: 32px;
     flex-wrap: wrap;
     align-items: center;
     min-height: 670px;
+}
+
+.box-image {
+    background: url(/Imagens/—Pngtree—abstract\ technology\ binary\ codes\ and_1259890.png);
 }
 
 .primeira > div {
@@ -137,6 +141,8 @@ section {
 .primeira > div p {
     max-width: 600px;
     text-align: justify;
+    color: white;
+    font-size: 25px;
 }
 
 h1 {
@@ -149,16 +155,38 @@ h1 {
     color: #00ffc3de;
 }
 
-.imagemMain {
+/* .imagemMain {
     max-width: 350px;
     padding: 16px;
+} */
+
+/* .imgADS {
+    border-radius: 90%;
+    width: 300px;
+} */
+
+#BTN-mat {
+    background-color: #14d9abde;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 15px;
+    text-align: center;
+    width: 500px;
+    margin-left: 45px;
 }
 
-.imgADS {
-    /* border-radius: 90%; */
-    width: 100%;
+#BTN-mat a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
 
+#BTN-mat:hover {
+    background-color: rgba(46, 159, 131, 0.585);
+    border: 1px solid white;
+    border-color: white;
+}
 /* segunda seção */
 .segunda {
     margin-top: -5px;
