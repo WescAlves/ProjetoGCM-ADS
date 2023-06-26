@@ -2,6 +2,12 @@ const body = document.querySelector("body");
 let MatBtn = document.querySelector("#sign-in-btn");
 const LoginBtn = document.querySelector("#log-in-btn");
 const divBtn = document.querySelector(".botoes");
+const eventoMat = new Event('click');
+const btnMatAlt = document.querySelector("#sign-in-btnn");
+btnMatAlt.addEventListener('click', function(){
+    console.log(btnMatAlt);
+    MatBtn.dispatchEvent(eventoMat);
+})
 class usuario  {
     constructor (user, password, log){
         this.user = user;

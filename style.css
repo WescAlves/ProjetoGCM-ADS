@@ -244,7 +244,7 @@ h1 {
     width: 300px;
 } */
 
-#BTN-mat {
+.BTN-mat {
     background-color: #14d9abde;
     border: 1px solid white;
     border-radius: 50px;
@@ -254,14 +254,14 @@ h1 {
     margin-left: 45px;
 }
 
-#BTN-mat a {
+.BTN-mat {
     text-decoration: none;
     color: white;
     font-size: 20px;
     font-weight: bold;
 }
 
-#BTN-mat:hover {
+.BTN-mat:hover {
     background-color: rgba(46, 159, 131, 0.585);
     border: 1px solid white;
     border-color: white;
