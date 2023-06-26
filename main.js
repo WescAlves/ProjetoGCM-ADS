@@ -38,7 +38,7 @@ window.addEventListener("load", function(){
             MatBtn.remove();
             LoginBtn.remove();
             let p = document.createElement("p");
-            p.textContent = `Bem vindo ${loggedUser.user}`
+            p.textContent = `Bem vindo, ${loggedUser.user}`
             p.id = 'welcome';
             divBtn.appendChild(p);
             let logoutBtn = document.createElement("button");

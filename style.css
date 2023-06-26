@@ -11,6 +11,62 @@ body {
     height: 100%;
 }
 
+/* Pop-up Login e Matricula */
+#welcome{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color:#00ffc3de;
+}
+
+dialog{
+border: none;
+border-radius: 50px;
+width: 500px;
+height: 550px;
+background: linear-gradient(180deg, rgb(68, 168, 168) 60%, rgb(255, 255, 255));
+padding: 0px;
+}
+
+dialog::backdrop{
+visibility: 0%;
+}
+
+
+.modal-title{
+font-size: 45px;
+text-align: center;
+font-weight: bold;
+color: white;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin-bottom: 80px;
+}
+
+#modal-btn{
+background-color: #14d9abde;
+border: 1px solid rgb(255, 255, 255);
+color: white;
+font-weight: bold;
+font-size: 15px;
+width: 100px;
+margin-bottom: 45px;
+margin-left: 200px;
+}
+
+#modal-btn:hover {
+background-color: rgba(46, 159, 131, 0.585);
+border: 1px solid white;
+border-color: white;
+}
+
+.modal-input{
+width: 320px;
+height: 45px;
+margin-left: 92px;
+margin-bottom: 55px;
+border-radius: 8px;
+border: 1px solid black;
+}
+
 /* Barra de rolagem */
 ::-webkit-scrollbar {
     width: 10px;
@@ -76,10 +132,29 @@ nav {
 
 button {
     padding: 9px;
-    font-size: 14px;
+    font-size: 1px;
     border-radius: 6px;
     cursor: pointer;
     transition: .4s;
+}
+
+.botoes button { /*Botao logout*/
+    background-color: #14d9abde;
+    padding: 9px;
+    font-size: 15px;
+    border: 1px solid white;
+    color: white;
+    height: 40px;
+    margin-top: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.botoes button:hover { /*Botão logout*/
+    background-color: rgba(46, 159, 131, 0.585);
+    border: 1px solid white;
+    border-color: white;
 }
 
 .btn {
@@ -129,7 +204,7 @@ section {
 
 .box-image1 {
     background: url(/Imagens/—Pngtree—abstract\ technology\ binary\ codes\ and_1259890.png);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 }
 
 .primeira > div {
@@ -219,7 +294,7 @@ h1 {
     gap: 16px;
     justify-content: center;
     align-items: center;
-    margin-left: 1000px;
+    margin-left: 750px;
     flex-wrap: wrap;
 }
 
@@ -239,7 +314,7 @@ h1 {
 .terceira {
     background-color: white;
     display: flex;
-    height: 500px;
+    height: 850px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -266,7 +341,7 @@ h1 {
 }
 
 /* quarta seção */
-.quarta {
+/* .quarta {
     background-color:white;
     display: flex;
     height: 350px;
@@ -290,7 +365,7 @@ h1 {
     max-width: 600px;
     color: black;
     text-align: justify;
-}
+} */
 
 /* Rodapé */
 .Rodape {
@@ -333,55 +408,4 @@ footer .redes_sociais {
     justify-content: center;
     gap: 32px;
     flex-wrap: wrap;
-    }
-
-    #welcome{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 15px;
-        color: aquamarine;
-    }
-
-
-dialog{
-    border-radius: 30px;
-    width: 594px;
-    height: 394px;
-    background-color:rgb(130, 233, 233);
-    padding: 0px;
-    
-}
-dialog::backdrop{
-    visibility: 0%;
-}
-.modal-title{
-    font-size: 35px;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 45px;
-}
-#modal-btn{
-    background-color: #00ffc3de;
-    border: 1px solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-    width: 100px;
-    margin-bottom: 45px;
-    margin-left: 250px;
-
-
-}
-#modal-btn:hover {
-    background-color: rgba(46, 159, 131, 0.585);
-    border: 1px solid white;
-    border-color: white;
-    
-}
-
-.modal-input{
-    width: 292px;
-    height: 30px;
-    margin-left: 150px;
-    margin-bottom: 55px;
-    border-radius: 5px;
-    border: none;
-
-}
+} 
