@@ -92,7 +92,8 @@ border: 1px solid black;
     position: absolute;
     width: 100%;
     height: 100px;
-    background-color: rgb(17, 17, 72);
+    background-color: rgb(17, 33, 80);
+    /*  background-color: rgba(17, 17, 72); */
     min-height: 50px;
     right: 0;
 }
@@ -333,6 +334,27 @@ h1 {
     color: black;
 }
 
+summary {
+    list-style: none;
+    font-size: 25px;
+}
+
+.Disciplinas {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding-bottom: 20px;
+}
+
+.periodo {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    justify-content: center;
+    text-align: justify;
+}
+
+
 .terceira ul {
     list-style: none;
     display: flex;
@@ -382,7 +404,9 @@ h1 {
     flex-direction: row;
     gap: 32px;
     flex-shrink: 0;
-    background-color: rgba(17, 17, 72, 0.952);
+    background-color: rgb(17, 33, 80);
+    /* background-color: rgb(33, 33, 106); */
+    /* background-color: rgba(17, 17, 72); */
     height: 200px;
     justify-content: space-evenly;
 }
