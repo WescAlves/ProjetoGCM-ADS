@@ -204,6 +204,8 @@ section {
 
 .box-image1 {
     background: url(/Imagens/—Pngtree—abstract\ technology\ binary\ codes\ and_1259890.png);
+    /* background-attachment: fixed; */
+    background-size: cover;
     background-repeat: no-repeat; 
 }
 
@@ -275,6 +277,8 @@ h1 {
 
 .box-image2 {
     background: url(/Imagens/Section2.png);
+    /* background-attachment: fixed; */
+    background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
     margin-top: -2px;
@@ -323,6 +327,10 @@ h1 {
 
 .titulo {
     color: gray;
+}
+
+.terceira h1 {
+    color: black;
 }
 
 .terceira ul {
