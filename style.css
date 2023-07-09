@@ -271,7 +271,7 @@ h1 {
 .segunda {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.081), rgba(0, 0, 0, 0.842)75%);
     display: flex;
-    height: 640px;
+    height: 840px;
     flex-direction: column;
     gap: 16px;
 }
@@ -303,13 +303,18 @@ h1 {
     flex-wrap: wrap;
 }
 
+#texto {
+    letter-spacing: 0.5px;
+    line-height: 26px;
+}
+
 /* .segunda > div img {
     width: 300px;
     border-radius: 10px;
 } */
 
 .segunda > div p {
-    max-width: 900px;
+    max-width: 1200px;
     color: white;
     text-align: justify;
     font-size: 20px;
@@ -317,7 +322,8 @@ h1 {
 
 /* terceira seção */
 .terceira {
-    background-color: white;
+    /* background: linear-gradient(180deg, rgba(18, 16, 66, 0.829), rgba(0, 0, 0, 0.842)); */
+    background-color: #130f34e1;
     display: flex;
     height: 850px;
     flex-direction: column;
@@ -326,17 +332,26 @@ h1 {
     gap: 32px;
 }
 
-.titulo {
-    color: gray;
+.box-image3 {
+    background: url(Imagens/Section3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -2px;
 }
 
 .terceira h1 {
-    color: black;
+    color: white;
 }
 
-summary {
-    list-style: none;
-    font-size: 25px;
+.terceira ul h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.terceira ul li {
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
 .Disciplinas {
@@ -344,6 +359,11 @@ summary {
     justify-content: center;
     gap: 32px;
     padding-bottom: 20px;
+}
+
+.terceira h1 {
+    font-size: 40px;
+    color: #00ffc3de;
 }
 
 .periodo {
@@ -354,6 +374,9 @@ summary {
     text-align: justify;
 }
 
+.periodo strong {
+    color: #00ffc3de;
+}
 
 .terceira ul {
     list-style: none;
@@ -364,23 +387,29 @@ summary {
     flex-wrap: wrap;
 }
 
-.terceira ul li {
-    color: black;
-    letter-spacing: 2px;
-    font-weight: bold;
+#ocultar {
+    color: #130f34e1;
 }
 
 /* quarta seção */
-/* .quarta {
-    background-color:white;
+.quarta {
+    background: linear-gradient(90deg, rgb(0, 0, 0), #251e5ab3);
     display: flex;
-    height: 350px;
+    height: 780px;
     flex-direction: column;
     gap: 32px;
 }
 
-.quarta h1 {
-    color: black;
+.box-image4 {
+    background: url(Imagens/Section4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -2px;
+}
+
+.quarta strong {
+    color: #00ffc3de;
+    font-size: 40px;
 }
 
 .quarta > div {
@@ -391,11 +420,43 @@ summary {
     flex-wrap: wrap
 }
 
-.quarta > div p {
-    max-width: 600px;
-    color: black;
+#esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    
+    flex-wrap: wrap;
+}
+
+#esquerda p {
+    letter-spacing: 0.5px;
+    line-height: 26px;
+}
+
+#direita {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    
+    flex-wrap: wrap;
+}
+
+#direita p {
+    letter-spacing: 0.5px;
+    line-height: 26px;
+}
+
+.quarta p {
+    max-width: 1500px;
+    color: white;
     text-align: justify;
-} */
+    font-size: 20px;
+}
 
 /* Rodapé */
 .Rodape {
@@ -441,3 +502,7 @@ footer .redes_sociais {
     gap: 32px;
     flex-wrap: wrap;
 } 
+
+svg:hover {
+    fill: #00ffc3de;
+}
