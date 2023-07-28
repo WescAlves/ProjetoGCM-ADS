@@ -126,6 +126,7 @@ window.addEventListener("load", function(){
                 //LoginPas.style.marginLeft = '10px'
                 LoginUsr.placeholder = "Usuário";
                 LoginPas.placeholder = "Senha";
+                LoginPas.type = "password"
                 //LoginUsr.style.marginTop = '25px'
                 //LoginUsr.style.width = '285px';
                 //LoginPas.style.width = '285px';
